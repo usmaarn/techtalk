@@ -26,7 +26,7 @@ export default function WhatWeDo() {
                             ipsa? Qui provident ipsum libero consequatur praesentium voluptate error delectus illum alias
                         </p>
                         <CustomLink href="#" className="transition duration-300 hover:scale-105 font-bold mt-5 inline-block px-5 py-3 bg-blue-300 rounded">
-                            Learn More >
+                            Learn More &gt
                         </CustomLink>
                     </div>
                 ))}
