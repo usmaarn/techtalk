@@ -1,0 +1,29 @@
+
+.navbar{
+    @apply px-5 lg:px-24 h-20 w-full flex gap-5 items-center justify-between relative border-b;
+
+    *{
+        @apply transition-all duration-300;
+    }
+
+    .logoWrapper{
+        @apply flex leading-[20px] text-xl text-blue-900 font-semibold gap-2 items-stretch;
+
+        .logo{
+            @apply w-10 h-10 text-2xl flex text-white font-black items-center justify-center bg-blue-900 rounded;
+        }
+    }
+
+    .navLink{
+        @apply font-medium text-gray-600 cursor-pointer relative px-5 py-1.5
+            transition duration-300 hover:text-red-500;
+    }
+
+    .contactUs, .loginBtn{
+        @apply hidden lg:flex items-center gap-2 px-5 py-2.5 rounded bg-indigo-500 text-white capitalize
+        text-sm hover:scale-105 transition-all duration-300 font-medium;
+    }
+
+    .loginBtn{@apply bg-blue-500;}
+}
+

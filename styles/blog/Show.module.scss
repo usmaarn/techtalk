@@ -1,0 +1,20 @@
+
+.blog{
+  @apply max-w-[900px] mx-auto flex flex-col gap-1;
+
+  .content {
+      @apply py-5;
+      h1,h2,h3,h4,h5,h6{@apply font-semibold my-2;}
+      h1{@apply text-[35px]}
+      h2{@apply text-[22px]}
+      h3{@apply text-[20px]}
+      h4{@apply text-[18px]}
+      h5{@apply text-[16px]}
+      p{@apply mb-5}
+      pre{
+        @apply bg-gray-900 p-3 rounded mb-3 text-gray-300 text-sm;
+        code{@apply p-0 m-0 bg-transparent inline text-sm;}
+      }
+      code{@apply inline-block rounded text-xs bg-gray-300 px-1 py-0.5 mb-0.5;}
+  }
+}

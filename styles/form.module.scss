@@ -1,0 +1,15 @@
+.form{
+    @apply flex flex-col gap-4 items-start;
+}
+.inputBox{
+    @apply w-full;
+}
+.input {
+    @apply px-5 py-2.5 w-full outline-0 rounded ring-1 ring-gray-300 focus:ring-blue-500 text-sm resize-none;
+}
+.button{
+    @apply px-5 py-3 shadow rounded bg-blue-500 text-white hover:scale-105 transition;
+}
+.error{
+    @apply text-sm font-medium text-red-500 block;
+}

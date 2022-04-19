@@ -1,0 +1,13 @@
+
+.wrapper{
+  @apply px-5 md:px-12 lg:px-24 bg-blue-200 md:bg-gradient-to-r from-blue-200 py-3;
+
+  .actionBtn{
+    @apply flex items-center gap-2 p-3 md:px-5 rounded bg-red-500 text-white capitalize
+      text-sm md:text-base hover:scale-105 transition-all font-medium duration-300 cursor-pointer;
+  }
+
+  .socialIcon{
+      @apply transition duration-300 hover:scale-105 cursor-pointer hover:text-blue-500;
+  }
+}

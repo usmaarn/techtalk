@@ -1,0 +1,35 @@
+
+.wrapper{
+  @apply px-24 py-5;
+
+  .heading{
+    @apply text-3xl my-10;
+  }
+
+  .content{
+    @apply grid grid-cols-3 gap-10 py-10;
+
+    .blogs{
+      @apply col-span-2 grid grid-cols-2 gap-5;
+
+      .blog{
+        @apply rounded border transition-shadow duration-500;
+
+        &:hover{
+          @apply shadow-xl;
+          .blog_thumbnail{@apply scale-110;}
+        }
+
+          .blog_thumbnail_wrapper{
+            @apply bg-black overflow-hidden;
+
+            .blog_thumbnail{@apply opacity-70 transition duration-700}
+          }
+
+        .blog_tag{@apply text-sm text-blue-800 font-medium   p-3 inline-block;}
+        .blog_title{@apply block text-lg leading-tight font-light mt-2 mb-5 hover:underline px-3;}
+        .blog_date{@apply px-3 py-2 text-sm font-normal text-gray-600;}
+      }
+    }
+  }
+}
