@@ -30,7 +30,7 @@ export default function NewsLetter(){
                 </h3>
                 <CustomLink href="#" className="px-5 md:px-10 py-3 md:py-4 rounded bg-red-600
                 hover:scale-105 text-white font-bold">
-                    Contact Us &gt
+                    Contact Us &gt;
                 </CustomLink>
             </div>
         </div>

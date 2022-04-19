@@ -26,7 +26,7 @@ export default function Blogs(){
                 ))}
             </div>
             <CustomLink href="/blogs" className="float-right mt-5 hover:underline cursor-pointer font-bold text-blue-600">
-                Read More >>
+                Read More &gt;&gt;
             </CustomLink>
         </div>
     )
