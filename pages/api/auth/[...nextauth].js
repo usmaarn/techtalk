@@ -3,11 +3,9 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import {compare} from 'bcrypt'
 import User from "../../../config/models/User";
 import {Op} from 'sequelize';
-import SequelizeAdapter from "@next-auth/sequelize-adapter";
-import db from "../../../config/db";
 
 
-export default (req, res) => NextAuth(req, res, {
+const handler = (req, res) => NextAuth(req, res, {
     session: {
         maxAge: 30 * 60 * 60
     },
@@ -31,3 +29,5 @@ export default (req, res) => NextAuth(req, res, {
         })
     ]
 });
+
+export default handler;

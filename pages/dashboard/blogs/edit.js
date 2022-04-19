@@ -1,6 +1,6 @@
-import Layout from "@/components/dahboard/Admin";
 import Editor from "@/components/Editor";
 import {useState} from "react";
+import Admin from "@/components/layouts/Admin";
 
 export default function Edit(){
 
@@ -13,7 +13,7 @@ export default function Edit(){
     const handleChange = e => setBlog({...blog, [e.target.name]: e.target.value})
 
     return (
-        <Layout heading='Edit Blog'>
+        <Admin heading='Edit Blog'>
             <form action="" className='flex flex-col gap-5 max-w-[800px] mt-10'>
 
                 <div className="">
@@ -34,6 +34,6 @@ export default function Edit(){
                     </button>
                 </div>
             </form>
-        </Layout>
+        </Admin>
     )
 }

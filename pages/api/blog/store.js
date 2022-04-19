@@ -1,8 +1,7 @@
 import { getSession } from "next-auth/react"
 import Post from "../../../config/models/Post";
-import post from "../../../config/models/Post";
 
-export default async function (req, res) {
+export default async function handler(req, res) {
     const session = await getSession({ req })
 
     if (!session) return res.status(402).send({

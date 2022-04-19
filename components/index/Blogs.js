@@ -1,6 +1,7 @@
 import {images as blogs} from "@/components/index/Heading";
 import {RiTimeLine} from "react-icons/ri";
 import CustomLink from "@/components/CustomLink";
+import Image from "next/image";
 
 export default function Blogs(){
     return(
@@ -15,7 +16,8 @@ export default function Blogs(){
                     <CustomLink href="#" key={blog.tag} className='block'>
                         <div className="border rounded-lg overflow-hidden cursor-pointer">
                             <div className='bg-black hover:scale-110 transition duration-500'>
-                                <img src={`images/techtalk/${blog.bgImage}`} className='opacity-50' />
+                                <Image width={100}  height={100} src={`/images/techtalk/${blog.bgImage}`}
+                                       className='opacity-50' alt={blog.title} />
                             </div>
                             <div className="py-5 font-medium">
                                 <span className='text-sm bg-blue-200 py-2 px-5'>{blog.tag}</span>

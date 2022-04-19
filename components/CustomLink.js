@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const CustomLink = ({href, className, children}) => {
     return(
-        <Link href={href}>
+        <Link href={href} passHref>
             <span className={className + ' transition duration-300 cursor-pointer'}>{children}</span>
         </Link>
     )
