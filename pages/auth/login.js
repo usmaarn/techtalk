@@ -1,9 +1,12 @@
 import {useState} from "react";
-import {signIn} from "next-auth/react"
 import {Button, Form, Input, InvalidInput} from "@/components/Form";
 import Main from "@/components/layouts/Main";
+import axios from "axios";
+import cookie from 'cookie-cutter';
 
 export default function Login({ csrfToken }) {
+
+    console.log(cookie.get('access_token'))
 
     const [error, setError] = useState('');
     const [user, setUser] = useState({
@@ -14,10 +17,14 @@ export default function Login({ csrfToken }) {
     const handleChange = (e) => setUser({...user, [e.target.name]: e.target.value})
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        let response = await signIn("credentials", {...user, redirect: false})
-        if (response.error) return setError(response.error)
-        location.href = '/';
+       try {
+           e.preventDefault();
+           let response = await axios.post('/api/auth/login', user);
+           console.log(response.data);
+           // location.href = '/';
+       }catch (e){
+           setError(e.response.data);
+       }
     }
 
     return (

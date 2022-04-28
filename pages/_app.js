@@ -1,12 +1,20 @@
 import '../styles/globals.css'
-import {SessionProvider} from 'next-auth/react'
+import SessionProvider, {getSession} from "../config/sessionContext";
+import App from "next/app";
 
-function MyApp({ Component, pageProps: {session, ...pageProps} }) {
+function MyApp({ Component, pageProps }) {
   return (
-      <SessionProvider session={session}>
+      <SessionProvider value={pageProps.session}>
         <Component {...pageProps} />
       </SessionProvider>
   )
 }
+
+MyApp.getInitialProps = async (appContext) => {
+    const appProps = await App.getInitialProps(appContext);
+    appProps.pageProps.session = await getSession()
+    return { ...appProps}
+}
+
 
 export default MyApp

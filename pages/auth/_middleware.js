@@ -1,9 +1,4 @@
-import { withAuth } from "next-auth/middleware"
 
-export default withAuth({
-    callbacks: {
-        authorized: ({req, token}) => {
-            return !token
-        }
-    },
-})
+export default async function handler(req, event){
+
+}

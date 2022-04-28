@@ -1,9 +1,11 @@
-import {getSession} from "next-auth/react";
-import User from "../../config/models/User";
+const crypto = require('crypto');
+import {encryptWithSecret, decryptWithSecret} from "next/dist/server/crypto-utils";
+
 
 export default async function handle(req, res){
-    let session = await getSession({req});
-    let user = await User.findOne({where:{email:session.user.email}});
-    console.log(user)
-    res.send(user.toJSON());
+    const data = {id:1, name: 'Usman Muhammad', email: 'baba@test.com', token: 'mcdakvmdsaklvdsaklv'}
+    const stringifiedData = JSON.stringify(data);
+    const ncryptEncrypted = encryptWithSecret('secret', stringifiedData);
+    const decryptedData = decryptWithSecret('secret', ncryptEncrypted);
+    res.send(decryptedData)
 }

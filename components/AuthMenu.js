@@ -1,4 +1,4 @@
-import {useSession, signOut} from "next-auth/react";
+import {signOut, useSession} from "../config/sessionContext";
 import styles from "@/styles/Navbar.module.scss";
 import CustomLink from "@/components/CustomLink";
 import {useState} from "react";

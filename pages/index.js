@@ -4,9 +4,11 @@ import Blogs from "@/components/index/Blogs";
 import NewsLetter from "@/components/index/NewsLetter";
 import Main from "@/components/layouts/Main";
 import Post from "../config/models/Post";
+import {useSession} from "../config/sessionContext";
 
-export default function index({blogs}){
 
+export default function Index({blogs}){
+    const session = useSession();
     blogs = JSON.parse(blogs)
 
   return(
